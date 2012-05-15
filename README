@@ -1,1 +1,23 @@
-从没有来获取git clone git@github.com:microinside/how2git.git
+ALL:
+	>git status
+PULL:
+	>从没有来
+		git clone git@github.com:microinside/how2git.git
+	>已有的,服务器版本新
+		git fetch origin
+		git rebase
+PUSH:
+	>新建, 在服务器新建Repo
+		mkdir Test
+		cd Test
+		git init
+		git add .
+		git commit -m 'ver 1.0'
+		git remote add origin git@github.com:microinside/Test.git
+		git push -u origin master
+	>已有, 本地版本新
+		git add .
+		git commit -m 'ver 1.1'
+		git push -u origin master
+		
+	 
