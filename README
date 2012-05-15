@@ -1,11 +1,12 @@
 ALL:
 	>git status
+	>命令提示Tab
 PULL:
 	>从没有来
 		git clone git@github.com:microinside/how2git.git
 	>已有的,服务器版本新
 		git fetch origin
-		git rebase
+		git rebase origin/master
 PUSH:
 	>新建, 在服务器新建Repo
 		mkdir Test
