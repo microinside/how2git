@@ -3,19 +3,20 @@ ALL:
 	>命令提示Tab
 PULL:
 	>从没有来
-		git clone git@github.com:microinside/how2git.git
+		git clone git@github.com:microinside/how2git.git #将某repo下载到本地库
 	>已有的,服务器版本新
-		git fetch origin
-		git rebase origin/master
+		git fetch origin #获取服务器库的更新到本地
+		git rebase origin/master #同步本地与服务器库
 PUSH:
 	>新建, 在服务器新建Repo
 		mkdir Test
 		cd Test
-		git init
-		git add .
-		git commit -m 'ver 1.0'
-		git remote add origin git@github.com:microinside/Test.git
-		git push -u origin master
+		git init #为当前目录建立本地git库
+		git add . #添加某某文件到本地git库
+		git rm . #从本地git库删除某文件, 本地文件不会直接删除掉
+		git commit -m 'ver 1.0' #确认对本地git库的修改, 并给出版本号
+		git remote add origin git@github.com:microinside/Test.git #关联本地库和远程服务器上库
+		git push -u origin master #将对本地git库的修改应用到服务器上库
 	>已有, 本地版本新
 		git add .
 		git commit -m 'ver 1.1'
